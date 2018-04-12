@@ -7,7 +7,7 @@ RUN mkdir -p /var/www/html
     
 ADD php-fpm.conf /usr/local/php7/etc/
 ADD php.ini /usr/local/php7/etc/
-ADD microvcard.conf /usr/local/php7/etc/
+ADD microvcard.conf /usr/local/php7/etc/php-fpm.d/
 ADD index.php /var/www/html
 EXPOSE 9000
 
