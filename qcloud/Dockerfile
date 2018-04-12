@@ -1,6 +1,6 @@
 FROM ccr.ccs.tencentyun.com/4-9-develop/php:init
 
-RUN mkdir /var/www/html
+RUN mkdir -p /var/www/html
 # /usr/local/php7/etc/php-fpm.conf
 # /usr/local/php7/etc/php.ini
 # /usr/local/php7/etc/php-fpm.d/microvcard.conf
