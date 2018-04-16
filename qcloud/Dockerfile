@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y \
 	&& curl -O https://getcomposer.org/composer.phar \
 	&& mv composer.phar composer \
 	&& mv composer /usr/local/bin \
-	&& chmod +x composer \
+	&& chmod +x /usr/local/bin/composer \
 	&& docker-php-ext-install -j$(nproc) iconv mcrypt \
 	&& docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
 	&& docker-php-ext-install -j$(nproc) gd \
