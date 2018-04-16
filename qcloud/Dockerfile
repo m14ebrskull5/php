@@ -19,7 +19,8 @@ RUN apt-get update && apt-get install -y \
 	&& ln /dev/null /dev/raw1394 
 
 WORKDIR /var/www/html
-RUN composer create-project --prefer-dist laravel/laravel blog 5.5.*
+RUN composer create-project --prefer-dist laravel/laravel blog 5.5.* \
+    && chmod -R 777 blog/storage
 
 EXPOSE 9000
 
